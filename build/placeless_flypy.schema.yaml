@@ -2,11 +2,11 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1654509031
-    default.custom: 1659539780
+    default.custom: 1670830438
     key_bindings: 1654509031
     key_bindings.custom: 0
     placeless_flypy.custom: 0
-    placeless_flypy.schema: 1663393416
+    placeless_flypy.schema: 1673612933
     punctuation: 1654509031
     punctuation.custom: 0
 engine:
@@ -47,6 +47,7 @@ key_binder:
     - {accept: Tab, send: Page_Down, when: composing}
     - {accept: bracketleft, send: Page_Up, when: paging}
     - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: Control, toggle: ascii_mode, when: always}
     - {accept: "Control+p", send: Up, when: composing}
     - {accept: "Control+n", send: Down, when: composing}
     - {accept: "Control+b", send: Left, when: composing}
@@ -156,15 +157,15 @@ recognizer:
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
 schema:
   author:
-    - "double pinyin layout by 鶴"
-    - "Rime schema by 佛振 <chen.sst@gmail.com>"
+    - "double pinyin layout by Maruka"
+    - "Rime schema by Maruka <levinnion@gmail.com>"
     - "Mod by placeless"
   description: |
     小鹤双拼自定义方案。
 
   name: "小鹤双拼"
   schema_id: placeless_flypy
-  version: 0.1
+  version: 0.0
 speller:
   algebra:
     - "erase/^xx$/"
@@ -172,10 +173,6 @@ speller:
     - "derive/^([aoe])([ioun])$/$1$1$2/"
     - "abbrev/^([a-z]).+$/$1/"
     - "abbrev/^([zcs]h).+$/$1/"
-    - "derive/^([zcs])h/$1/"
-    - "derive/^([zcs])([^h])/$1h$2/"
-    - "derive/([ei])n$/$1ng/"
-    - "derive/([ei])ng$/$1n/"
     - "xform/^([aoe])(ng)?$/$1$1$2/"
     - "xform/iu$/Q/"
     - "xform/(.)ei$/$1W/"

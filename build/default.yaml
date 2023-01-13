@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1654509031
-    default.custom: 1659539780
+    default.custom: 1670830438
     key_bindings: 1654509031
     key_bindings.custom: 0
     punctuation: 1654509031
@@ -11,11 +11,11 @@ ascii_composer:
   good_old_caps_lock: true
   switch_key:
     Caps_Lock: commit_code
-    Control_L: commit_text
-    Control_R: commit_text
+    Control_L: inline_ascii
+    Control_R: inline_ascii
     Eisu_toggle: clear
-    Shift_L: inline_ascii
-    Shift_R: inline_ascii
+    Shift_L: noop
+    Shift_R: noop
 config_version: 0.40
 key_binder:
   bindings:
@@ -35,8 +35,9 @@ key_binder:
     - {accept: Tab, send: Page_Down, when: composing}
     - {accept: bracketleft, send: Page_Up, when: paging}
     - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: Control, toggle: ascii_mode, when: always}
 menu:
-  page_size: 9
+  page_size: 4
 punctuator:
   full_shape:
     " ": {commit: "　"}
